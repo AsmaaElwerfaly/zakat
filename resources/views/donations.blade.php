@@ -1,0 +1,98 @@
+@extends('layouts.master')
+@section('css')
+<!--Internal  Nice-select css  -->
+<link href="{{URL::asset('assets/plugins/jquery-nice-select/css/nice-select.css')}}" rel="stylesheet"/>
+<!-- Internal Select2 css -->
+<link href="{{URL::asset('assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
+@endsection
+@section('page-header')
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div class="my-auto">
+						<div class="d-flex">
+							<h4 class="content-title mb-0 my-auto">Ecommerce</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ Product-Cart</span>
+						</div>
+					</div>
+					<div class="d-flex my-xl-auto right-content">
+						<div class="pr-1 mb-3 mb-xl-0">
+							<button type="button" class="btn btn-info btn-icon ml-2"><i class="mdi mdi-filter-variant"></i></button>
+						</div>
+						<div class="pr-1 mb-3 mb-xl-0">
+							<button type="button" class="btn btn-danger btn-icon ml-2"><i class="mdi mdi-star"></i></button>
+						</div>
+						<div class="pr-1 mb-3 mb-xl-0">
+							<button type="button" class="btn btn-warning  btn-icon ml-2"><i class="mdi mdi-refresh"></i></button>
+						</div>
+						<div class="mb-3 mb-xl-0">
+							<div class="btn-group dropdown">
+								<button type="button" class="btn btn-primary">14 Aug 2019</button>
+								<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="dropdownMenuDate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="sr-only">Toggle Dropdown</span>
+								</button>
+								<div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuDate" data-x-placement="bottom-end">
+									<a class="dropdown-item" href="#">2015</a>
+									<a class="dropdown-item" href="#">2016</a>
+									<a class="dropdown-item" href="#">2017</a>
+									<a class="dropdown-item" href="#">2018</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- breadcrumb -->
+@endsection
+@section('content')
+				<!-- row opened -->
+				 <div class="row">
+					<div class="col-xl-12 col-md-12">
+						<div class="card">
+							<div class="card-body">
+								<!-- Shopping Cart-->
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="table text-md-nowrap" id="example1">
+											<thead>
+												<tr>
+													<th >ت</th>
+													<th >الحمله</th>
+													<th >المتبرع</th>
+													<th >قيمة التبرع   </th>
+
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<?php $i =0?>
+													@foreach($donations as $d)
+													<?php $i++?>
+													<td>{{$i}}</td>
+													<td>{{$d->campaign_name}}</td>
+													<td>{{$d->username}}</td>
+													<td>{{$d->amount}}</td> 
+          
+											</tr>
+											@endforeach
+											</tbody>
+										</table>
+			
+									</div>
+			
+								</div>  	
+													
+					
+					</div>
+				</div>
+				<!-- row closed -->
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+@endsection
+@section('js')
+<!-- Internal Select2.min js -->
+<script src="{{URL::asset('assets/plugins/select2/js/select2.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/select2.js')}}"></script>
+<!-- Internal Nice-select js-->
+<script src="{{URL::asset('assets/plugins/jquery-nice-select/js/jquery.nice-select.js')}}"></script>
+<script src="{{URL::asset('assets/plugins/jquery-nice-select/js/nice-select.js')}}"></script>
+@endsection
