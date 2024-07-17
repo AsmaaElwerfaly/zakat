@@ -75,7 +75,7 @@
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">
-									<table class="table text-md-nowrap" id="example2">
+									<table class="table text-md-nowrap" id="example1">
 										<thead>
                                             <tr>
                                                 <th >ت</th>
@@ -228,33 +228,6 @@
 
 
 
-                            <div class="modal fade" id="exampleModal22" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">تعديل الحمله</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                            
-                                                <form action="donation.index2" method="post" enctype="multipart/form-data" autocomplete="off">
-                                                    {{ method_field('patch') }}
-                                                    {{ csrf_field() }}
-                                                   
-                                                    <input type="text" name="id" id="id" value="">
-
-                                                           
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                
-                            </div>
-                            
 
 
                                 <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -286,11 +259,11 @@
 
                                                     <div class="form-group">
                                                         <label for="exampleInputEmail1" class="control-label">التصنيف </label>
-                                                        <select class='form-control' name='name_category' id='name_category' >
+                                                        <select class='form-control' name='name_category' id="name_category" >
                                                             <!--placeholder-->
                                                             @foreach ($categorie as $categorie)
 
-                                                            <option  > {{$categorie->name_category}}</option>
+                                                            <option > {{$categorie->name_category}}</option>
                                                             @endforeach
                                                             </select>
                                                     </div>
@@ -340,24 +313,18 @@
                             
                                 
                             </div>
-                            
-                            <!-- 
-                                
-                                bd -->
-                          
-                           <!--تعديل --> 
-                        
-                                            </div>
+                                                  
+                      </div>
                                            
-                                            <!-- row closed -->
-                                        </div>
+             <!-- row closed -->
+                 </div>
                                       
-                                        </div>
+              </div>
                                     
-                                        </div>
-                        </div>                       
-                </div>
-        </div>
+         </div>
+                 </div>                       
+             </div>
+         </div>
        
             <div class="modal" id="modaldemo9">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -383,14 +350,10 @@
                 </div>
         </div>
    <!--تعديل --> 
-          
                     </div>
-    
-                    <!-- row closed -->
-                </div>
-              
-                    
-                <!-- Container closed -->
+                        <!-- row closed -->
+                </div>               
+               <!-- Container closed -->
             </div>
             
         

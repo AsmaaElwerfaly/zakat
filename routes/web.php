@@ -14,7 +14,7 @@ Route::get('/', function () {
 
     
 });
-Auth::routes();
+Auth::routes(['register' => false]);
 
 
 Route::resource( 'categories' ,CategoriesController::class);
