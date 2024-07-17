@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\campaign;
+use App\Models\categorie;
+use App\Models\donation;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +27,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $countcampaign=campaign::count();
+       $countcategorie=categorie::count();
+       $countUser=User::count();
+       $countdonation=donation::count();
+
+
+
+
+       return view('home',compact('countcampaign','countcategorie','countUser','countdonation'));
     }
 }
