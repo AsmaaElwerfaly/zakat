@@ -1,6 +1,5 @@
 <!-- Title -->
-<title> صندوق الزكاة</title>
-<!-- Favicon -->
+<title> @yield('title') </title><!-- Favicon -->
 <link rel="icon" href="{{URL::asset('assets/img/brand/6.jpg')}}" type="image/x-icon"/>
 <!-- Icons css -->
 <link href="{{URL::asset('assets/css/icons.css')}}" rel="stylesheet">

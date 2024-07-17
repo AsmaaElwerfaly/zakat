@@ -39,14 +39,14 @@
                         <th scope="col" width="20%">الاسم</th>
                     </thead>
 
-                    @foreach($permissions as $permission)
+                    @foreach($permission as $permission)
                         <tr>
                             <td>
                                 <input type="checkbox" 
                                 name="permission[{{ $permission->name }}]"
                                 value="{{ $permission->name }}"
                                 class='permission'
-                                {{ in_array($permission->name, $rolePermissions) 
+                                {{ in_array($permission->id, $rolePermissions) 
                                     ? 'checked'
                                     : '' }}>
                             </td>
